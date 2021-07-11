@@ -5,30 +5,15 @@
 - name: Install libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
-    - ack
     - ansible
-    - archey
-    - aspell
-    - atk
-    - autoconf
-    - autoenv
-    - automake
-    - bdw-gc
-    - boost
-    - brew-cask
     - tmux
-    - ranger
     - git
-    - zsh
-    - wget
-    - pyenv
-    - pyenv-virtualenv
-    - nvim
 
 - name: Install cask packages
   homebrew_cask: name={{ item }} state=present
   with_items:
     - iterm2
+    - alacritty
     - google-chrome
     - firefox
     - keepassxc
@@ -36,3 +21,5 @@
     - docker
     - visual-studio-code
     - dbeaver-community
+    - figma
+    - jetbrains-toolbox
