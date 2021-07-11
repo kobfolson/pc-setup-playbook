@@ -1,0 +1,22 @@
+---
+- name: Install libraries using apt
+  apt: name={{ item }} state=latest
+  sudo: true
+  with_items:
+     - nodejs
+     - npm
+     - ranger
+     - screenfetch
+     - tmux
+     - tree
+     - unrar
+     - unzip
+     - upower
+     - nvim
+     - youtube-dl
+     - zsh
+
+- name: Change shell to ZSH
+  sudo: true
+  user: shell=/usr/bin/zsh name={{ ansible_ssh_user }}
+
