@@ -8,6 +8,9 @@
     - ansible
     - tmux
     - git
+    - pipx
+    - stow 
+    - fzf
 
 - name: Install cask packages
   homebrew_cask: name={{ item }} state=present
@@ -20,6 +23,7 @@
     - google-drive
     - docker
     - visual-studio-code
+    - sublime-text
     - dbeaver-community
     - figma
     - jetbrains-toolbox

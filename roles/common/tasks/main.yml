@@ -1,0 +1,10 @@
+---
+- name: Clone dotfiles repo from github
+  ansible.builtin.git:
+    repo: 'https://github.com/kobfolson/dotfiles.git'
+    dest: ~/Code/github.com/kobfolson/dotfiles
+
+- name: Clone anyenv repo from github
+  ansible.builtin.git:
+    repo: 'https://github.com/idadzie/anyenv-install.git'
+    dest: ~/Code/github.com/idadzie/anyenv-install
